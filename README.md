@@ -1,5 +1,9 @@
 # Repo Health Doctor
 
+Repo Health Doctor is a Python CLI tool that checks whether a repository is ready for open-source publishing: README, license, security policy, contribution files, GitHub templates, CI setup, and more.
+
+It helps developers quickly find missing project files, improve documentation, generate safe templates, and get a clear repository health score from 0 to 100.
+
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
