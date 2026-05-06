@@ -36,7 +36,7 @@
 pip install repo-doctor
 
 # Или из исходников (для разработки)
-git clone https://github.com/yourusername/repo-health-doctor.git
+git clone https://github.com/PASTREL1997/repo-health-doctor.git
 cd repo-health-doctor
 pip install -e .
 ```
@@ -287,7 +287,7 @@ LICENSE                 # Лицензия MIT
 - [ ] Плагины для специфичных фреймворков (Django, FastAPI, etc.)
 - [ ] Автоматическое исправление общих проблем
 - [ ] Экспорт отчётов в HTML/PDF
-- [ ] GitHub Action для CI/CD
+- [ ] Публикация пакета в PyPI
 
 ## 🤝 Как внести вклад
 
