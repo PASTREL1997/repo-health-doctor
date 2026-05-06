@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-doctor"
+version = "1.0.0"
+description = "Анализирует здоровье локального Git-репозитория и показывает готовность к публикации"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Repo Health Doctor Contributors"}
+]
+keywords = [
+    "git",
+    "repository",
+    "analysis",
+    "cli",
+    "health",
+    "check"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+    "Topic :: System :: Shells",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/repo-health-doctor"
+Documentation = "https://github.com/yourusername/repo-health-doctor#readme"
+Repository = "https://github.com/yourusername/repo-health-doctor.git"
+Issues = "https://github.com/yourusername/repo-health-doctor/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+    "isort>=5.0",
+]
+
+[project.scripts]
+repo-doctor = "repo_doctor.cli:main"
+
+[tool.setuptools]
+packages = ["repo_doctor"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short --strict-markers"
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+]
